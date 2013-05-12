@@ -57,4 +57,11 @@ public class ERMD2WEditAttachment extends ERDCustomEditComponent {
     	return false;
     }
     
+    /**
+     * Return the binding for attachment configuration name but with a sane default.
+     * @return
+     */
+    public String attachmentConfigurationName() {
+    	return valueForStringBinding("attachmentConfigurationName", object().entityName() + "." + key());
+    }
 }

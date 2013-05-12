@@ -6,7 +6,7 @@ ERAttachmentFlexibleEditor : WOSwitchComponent {
 	viewHeight = ^attachmentViewHeight;
 	viewWidth = ^attachmentViewWidth;
 	injectDefaultCSS = ^attachmentInjectDefaultCSS;
-	configurationName = ^attachmentConfigurationName;
+	configurationName = attachmentConfigurationName;
 	editorCancelLabel = ^attachmentEditorCancelLabel;
 	editorEditLabel = ^attachmentEditorCancelLabel;
 	editorCancelButtonClass = ^attachmentEditorCancelButtonClass;
