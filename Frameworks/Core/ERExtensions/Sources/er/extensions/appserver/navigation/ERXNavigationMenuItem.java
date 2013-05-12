@@ -16,6 +16,7 @@ import com.webobjects.foundation.NSDictionary;
 import com.webobjects.foundation.NSMutableDictionary;
 
 import er.extensions.appserver.ERXDirectAction;
+import er.extensions.appserver.ERXRequest;
 import er.extensions.components.ERXStatelessComponent;
 import er.extensions.foundation.ERXProperties;
 import er.extensions.foundation.ERXStringUtilities;
@@ -114,7 +115,7 @@ public class ERXNavigationMenuItem extends ERXStatelessComponent {
         	if(_linkDirectlyToDirectActions) {
         		NSMutableDictionary bindings = navigationItem().queryBindings().mutableClone();
         		bindings.setObjectForKey(context().contextID(), "__cid");
-        		return context().directActionURLForActionNamed(navigationItem().directActionName(), bindings);
+        		return context().directActionURLForActionNamed(navigationItem().directActionName(), bindings, ERXRequest.isRequestSecure(context().request()), false);
         	}
         	return context().componentActionURL();
         }
