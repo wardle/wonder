@@ -21,7 +21,12 @@
             name = oldBlobValueId; 
             prototypeName = id; 
         }, 
-        {columnName = "OLD_VALUES"; name = oldValues; prototypeName = varcharLarge; }, 
+        {
+            allowsNull = Y; 
+            columnName = "OLD_VALUES"; 
+            name = oldValues; 
+            prototypeName = varcharLarge; 
+        }, 
         {allowsNull = N; columnName = "TRAIL_ID"; name = trailId; prototypeName = id; }, 
         {
             adaptorValueConversionMethodName = value; 
